@@ -1,4 +1,3 @@
-// game configuration object
 let config = {
     type: Phaser.CANVAS,
     width: 640,
@@ -6,14 +5,11 @@ let config = {
     scene: [ Menu, Play ]
 }
 
-// main game object
 let game = new Phaser.Game(config);
 
-// define game settings
-game.settings = {
-    spaceshipSpeed: 3,
-    gameTimer: 60000   
-}
+// set UI sizes
+let borderUISize = game.config.height / 15;
+let borderPadding = borderUISize / 3;
 
-// reserve keyboard vars
-let keyF, keyLEFT, keyRIGHT;
+// reserve keyboard variables
+let keyF, keyR, keyLEFT, keyRIGHT;
